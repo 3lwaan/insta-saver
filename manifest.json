@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "InstaSaver EDU",
+  "version": "1.2",
+  "description": "Download Instagram media from profile pages (profile picture, posts, reels, stories, highlights). Zips downloads per request.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "contextMenus",
+    "downloads",
+    "scripting",
+    "activeTab",
+    "storage",
+    "tabs",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://www.instagram.com/*",
+    "https://*.cdninstagram.com/*",
+    "https://scontent.cdninstagram.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["helpers.js", "content_script.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "InstaSaver EDU"
+  }
+}
