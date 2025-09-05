@@ -77,6 +77,3 @@ Contributions are welcome! Please open an issue to discuss proposed changes or s
 This project is currently without a license.  A license will be added in a future update.
 
 
-## Acknowledgements
-
-(Add any acknowledgements here)
